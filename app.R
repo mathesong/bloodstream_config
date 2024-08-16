@@ -165,7 +165,8 @@ ui <- fluidPage(theme = shinytheme("flatly"),
                            textInput(inputId = "pf_hgam_opt",
                                      label = "HGAM Smooth Formula",
                                      value = ""),
-                           p(div(HTML("<em>Use any of the subsetting attributes, as well as measurement (pet), e.g. s(time, k=8) + s(time, pet, bs='fs', k=5)</em>")),
+                           p(div(HTML("<em>Use any of the subsetting attributes, as well as measurement (pet).  ",
+                                      "Note: it is recommended to log-transform time for best results. e.g. s(log(time), k=8) + s(log(time), pet, bs='fs', k=5) </em>")),
                              #style = "font-size:12px;"
                              )
                            ),
